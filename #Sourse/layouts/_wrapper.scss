@@ -1,0 +1,26 @@
+[class*="__container"] {
+	max-width: 1452px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background-color: var(--gray-white);
+}
+
+body {
+	font-family: $ff1;
+	font-size: 20px;
+}
+
+body._lock {
+	overflow: hidden;
+}
+
+.main {
+	padding-top: 90px;
+}

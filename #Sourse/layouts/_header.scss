@@ -1,0 +1,167 @@
+//================================HeaderBlock===================================
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: var(--gray-white);
+
+	&__block {
+		background-color: var(--gray-white);
+
+		.header__content {
+			@include flexbox;
+			justify-content: space-between;
+			align-items: center;
+			height: 90px;
+			border-bottom: 2px solid var(--gray-lighter);
+		}
+	}
+}
+.header__logo {
+	height: 24px;
+	user-select: none;
+}
+.burger__icon {
+	position: relative;
+	height: 48px;
+	min-width: 48px;
+	border-radius: 12px;
+	background: var(--gray-dark);
+	cursor: pointer;
+
+	@include anim(background, 0.1s);
+	will-change: background;
+
+	&:hover {
+		background: var(--gray-medium);
+	}
+
+	&:active {
+		background: var(--gray-darker);
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 5px;
+		box-sizing: content-box;
+	}
+}
+
+//================================BurgerBlock=====================================
+
+.burger__block {
+	width: 100%;
+	background: var(--gray-white);
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	transform: translateY(-500%);
+	@include anim(transform, 0.3s);
+	will-change: transform;
+
+	.burger__content {
+		position: relative;
+		@include flexbox;
+		justify-content: space-between;
+		align-items: center;
+		height: 90px;
+		border-bottom: 2px solid var(--gray-lighter);
+
+		.menu__body {
+			position: absolute;
+			width: 480px;
+			height: 334px;
+			top: calc(90px + 22px);
+			right: 0;
+			z-index: 999;
+
+			@media (max-width: $md2) {
+				top: calc(90px + 16px);
+				width: 360px;
+				height: 294px;
+			}
+
+			@media (max-width: $md3) {
+				width: 92.5vw;
+			}
+
+			&--content {
+				background-color: var(--gray-white);
+				padding: 28px 40px 40px 40px;
+				border-radius: 40px;
+				box-sizing: border-box;
+				@include anim(all, 0.2s);
+
+				@media (max-width: $md2) {
+					padding: 20px;
+					border-radius: 20px;
+				}
+
+				hr {
+					background: var(--gray-lighter);
+					height: 2px;
+					width: 100%;
+					margin: 20px 0;
+
+					@media (max-width: $md2) {
+						margin: 16px 0;
+					}
+				}
+			}
+
+			.menu__list {
+				@include flexbox;
+				flex-direction: column;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+
+				li {
+					border-radius: 12px;
+					height: 40px;
+					background: var(--gray-lighter);
+					padding: 8px;
+					width: 100%;
+					cursor: pointer;
+					@include anim(background, 0.1s);
+					@include anim(color, 0.1s);
+					will-change: transition, color;
+
+					&:hover > a {
+						color: var(--red-main);
+					}
+
+					&:active {
+						background: var(--red-lighter);
+
+						> a {
+							color: var(--red-darker);
+						}
+					}
+				}
+
+				&--link {
+					@include T3;
+					color: var(--gray-dark);
+					font-weight: $bold;
+					user-select: none;
+				}
+			}
+		}
+	}
+}
+
+.burger__block.open {
+	transform: translateY(0%);
+}
+
+//=======================================================================
+
+//TODO: Проблема скрытого скролла

@@ -1,0 +1,16 @@
+// ФАЙЛ ОБНУЛЯЮЩИХ СТИЛЕЙ>
+@import "./base/nullstyle";
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
+@import "./base/ui";
+@import "./base/mixins";
+@import "./base/fonts";
+
+// ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+@import "./layouts/header";
+@import "./layouts/wrapper";
+@import "./layouts/banner";
+
+// ПОВТОРНО ИСПОЛЬЗУЕМЫЕ КОМПОНЕНТЫ>
+@import "./components/popup";
+@import "./components/typography";

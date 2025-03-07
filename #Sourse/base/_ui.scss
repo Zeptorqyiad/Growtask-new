@@ -1,0 +1,34 @@
+// ПЕРЕМЕННЫЕ>
+
+$md1: 1366.98px;
+$md2: 786.98px;
+$md3: 425.98px;
+$md4: 374.98px;
+$minwidth: 320px;
+
+$ff1: Inter;
+$ff2: Vladivostok;
+
+:root {
+    --gray-black: #0d0d0d;
+    --gray-darker: #2b2b2b;
+    --gray-dark: #404040;
+    --gray-medium: #999999;
+    --gray-light: #cccccc;
+    --gray-lighter: #f2f2f2;
+    --gray-white: #ffffff;
+
+    --red-darker: #a61029;
+    --red-dark: #cc1433;
+    --red-main: #f23051;
+    --red-light: #fc8b9e;
+    --red-lighter: #fcd7dd;
+
+    --violet-darker: #554d80;
+    --violet-dark: #665c99;
+    --violet-main: #897acc;
+    --violet-light: #cbc2f2;
+    --violet-lighter: #f9f7ff;
+
+    --color-gradient: linear-gradient(90deg, rgb(137, 122, 204), rgb(204, 41, 163) 49.479%, rgb(242, 48, 81) 100%);
+}

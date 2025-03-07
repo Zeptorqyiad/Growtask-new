@@ -1,0 +1,127 @@
+@import "../components/typography";
+
+// МИКСИНЫ>
+@mixin anim($style, $time) {
+	-webkit-transition: $style $time;
+	-moz-transition: $style $time;
+	-ms-transition: $style $time;
+	-o-transition: $style $time;
+	transition: $style $time;
+}
+@mixin rotate($deg) {
+	-webkit-transition: rotate($deg);
+	transition: rotate($deg);
+	-moz-transition: rotate($deg);
+	-ms-transition: rotate($deg);
+	-o-transition: rotate($deg);
+}
+@mixin cnt($h) {
+	display: flex;
+	flex-direction: columns;
+	height: $h;
+	text-align: center;
+	align-items: stretch;
+	justify-content: center;
+}
+@mixin scale($num) {
+	-moz-transform: scale($num);
+	-ms-transform: scale($num);
+	-webkit-transform: scale($num);
+	-o-transform: scale($num);
+	transform: scale($num);
+}
+@mixin flexbox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flexorder($val) {
+	-webkit-box-ordinal-group: $val;
+	-moz-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}
+@mixin textDefault($ff1, $color, $fz, $fw, $lh) {
+	font-family: $ff1;
+	color: $color;
+	font-size: $fz;
+	font-weight: $fw;
+	line-height: calc($lh / $fz * 100%);
+}
+
+@mixin bgImage($url, $pos, $repeat, $size) {
+	background-image: url($url);
+	background-position: $pos;
+	background-repeat: $repeat;
+	background-size: $size;
+}
+@mixin break_word() {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+@mixin text_count_line($count) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $count;
+	-webkit-box-orient: vertical;
+	@include break_word();
+}
+
+@mixin T1 {
+	font-size: 20px;
+	font-family: $ff1;
+	font-weight: $regular;
+	line-height: $quaLh;
+}
+@mixin T2 {
+	font-size: 16px;
+	font-family: $ff1;
+	font-weight: $regular;
+	line-height: $quaLh;
+}
+@mixin T3 {
+	font-size: 14px;
+	font-family: $ff1;
+	font-weight: $regular;
+	line-height: $quaLh;
+}
+@mixin T4 {
+	font-size: 12px;
+	font-family: $ff1;
+	font-weight: $regular;
+	line-height: $quaLh;
+}
+@mixin button {
+	padding: 13.5px 20px;
+	border-radius: 12px;
+	@include T3;
+	color: var(--gray-white);
+	@include anim(background, 0.1s);
+	will-change: background;
+	white-space: nowrap;
+	cursor: pointer;
+	text-align: center;
+}
+@mixin btnRed {
+	background: var(--red-main);
+	&:hover {
+		background: var(--red-light);
+	}
+	&:active {
+		background: var(--red-dark);
+	}
+}
+@mixin btnBlack {
+	background: var(--gray-dark);
+	&:hover {
+		background: var(--gray-medium);
+	}
+	&:active {
+		background: var(--gray-darker);
+	}
+}

@@ -1,0 +1,47 @@
+//=======================================================================
+
+$bold: 700;
+$regular: 400;
+
+$basicLh: 100%;
+$quaLh: 150%;
+
+h1 {
+    font-size: 76px;
+    line-height: 110%;
+    font-weight: $bold;
+    font-family: $ff2;
+    @media (max-width: $md2) {
+        font-size: 42px;
+    }
+}
+h2 {
+    font-size: 48px;
+    line-height: $basicLh;
+    font-weight: $bold;
+    font-family: $ff2;
+    @media (max-width: $md2) {
+        font-size: 32px;
+    }
+}
+h3 {
+    font-size: 28px;
+    line-height: $basicLh;
+    font-weight: $bold;
+    font-family: $ff2;
+    @media (max-width: $md2) {
+        font-size: 24px;
+    }
+}
+h4 {
+    font-size: 20px;
+    line-height: $basicLh;
+    font-weight: $bold;
+    font-family: $ff2;
+    @media (max-width: $md2) {
+        font-size: 20px;
+    }
+}
+
+//=======================================================================
+
