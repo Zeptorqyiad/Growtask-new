@@ -9,8 +9,10 @@
 // ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 @import "./layouts/header";
 @import "./layouts/wrapper";
-@import "./layouts/banner";
+@import "./layouts/main";
 
 // ПОВТОРНО ИСПОЛЬЗУЕМЫЕ КОМПОНЕНТЫ>
 @import "./components/popup";
 @import "./components/typography";
+@import "./components/slideItem";
+@import "./components/accordion";

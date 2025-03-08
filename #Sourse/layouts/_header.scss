@@ -5,7 +5,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 999;
 	background: var(--gray-white);
 
 	&__block {
@@ -160,6 +160,22 @@
 
 .burger__block.open {
 	transform: translateY(0%);
+}
+
+/* Затемнение контента */
+.main.dimmed {
+	position: relative;
+}
+
+.main.dimmed::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 99;
 }
 
 //=======================================================================

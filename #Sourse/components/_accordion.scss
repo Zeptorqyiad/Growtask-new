@@ -1,0 +1,35 @@
+//=======================================================================
+
+.grid__item {
+    cursor: pointer;
+    border-radius: 20px;
+    background: var(--gray-lighter);
+    border: 2px solid transparent;
+    @include anim(background, 0.1s);
+
+    &:hover {
+        box-sizing: border-box;
+        border: 2px solid var(--gray-light);
+        background: var(--gray-lighter);
+    }
+
+    &:active {
+        background: var(--gray-light);
+    }
+
+    &--header {
+        @include flexbox;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+    }
+
+    &--content {
+        display: none;
+        @include T2;
+        color: var(--gray-dark);
+        padding: 0 20px 20px 20px;
+        transition: all;
+    }
+}

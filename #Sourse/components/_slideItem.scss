@@ -1,0 +1,38 @@
+//=======================================================================
+
+.slide {
+    box-sizing: border-box;
+    border: 2px solid var(--violet-light);
+    border-radius: 40px;
+    background: var(--gray-white);
+    padding: 40px;
+    height: 280px !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 340px;
+    margin-right: 18px;
+
+    .slide__title {
+        background: var(--color-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: left;
+        user-select: none;
+    }
+
+    hr {
+        height: 2px;
+        width: 100%;
+        background: var(--gray-lighter);
+    }
+
+    .slide__text {
+        @include T2;
+        text-align: left;
+        color: var(--violet-dark);
+        user-select: none;
+    }
+}

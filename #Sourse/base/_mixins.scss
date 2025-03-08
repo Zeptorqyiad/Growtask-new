@@ -125,3 +125,12 @@
 		background: var(--gray-darker);
 	}
 }
+@mixin switchEffect {
+	background: var(--gray-light);
+	&:hover {
+		background: var(--gray-medium);
+	}
+	&:active {
+		background: var(--gray-darker);
+	}
+}

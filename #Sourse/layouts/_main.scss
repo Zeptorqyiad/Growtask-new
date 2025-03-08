@@ -1,0 +1,255 @@
+//==============================Banner=======================================
+
+.banner {
+    padding: 80px 0;
+    &__content {
+        @include flexbox;
+        gap: 20px;
+    }
+}
+
+.banner__content {
+    &--leftside {
+        // width: 700px;
+        flex: 0 1 700px;
+        padding-right: 20px;
+
+        h1 {
+            margin-bottom: 24px;
+        }
+        .banner__subtitle {
+            @include T2;
+            color: var(--gray-dark);
+        }
+        .buttons__block {
+            margin: 40px 0;
+            padding: 40px;
+            max-width: 551px;
+            width: 100%;
+            border: 2px solid var(--violet-light);
+            background: var(--violet-lighter);
+            border-radius: 40px;
+            box-sizing: border-box;
+            @include flexbox;
+            gap: 12px;
+            justify-content: space-between;
+
+            @media (max-width: 1141.98px) {
+                flex-direction: column;
+            }
+
+            .btn {
+                @include button;
+            }
+            .btn-red {
+                @include btnRed;
+            }
+            .btn-black {
+                @include btnBlack;
+
+                svg {
+                    margin-left: 14px;
+                }
+            }
+        }
+        .switch__block {
+            @include flexbox;
+            align-items: center;
+            gap: 8px;
+
+            span {
+                @include T2;
+                color: var(--gray-medium);
+            }
+        }
+    }
+    &--rightside {
+        position: relative;
+        flex: 0 1 700px;
+        display: flex;
+        align-items: flex-start;
+
+        .gradient__block {
+            position: absolute;
+            width: 17.2vw;
+            height: 17.2vw;
+            max-height: 340px;
+            max-width: 340px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--color-gradient);
+            border-radius: 40px;
+            z-index: 1;
+        }
+
+        img {
+            width: 17.2vw;
+            max-width: 340px;
+            height: auto;
+            display: block;
+            border-radius: 40px;
+
+            &:first-child {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+            }
+            &:last-child {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.banner__content--rightside img,
+.gradient__block {
+    flex-grow: 0;
+    max-width: 30vw;
+}
+
+//=======================================================================
+
+.form-switch {
+    display: inline-block;
+    cursor: pointer;
+
+    i {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+        border-radius: 22px;
+        vertical-align: text-bottom;
+        @include anim(all, 0.3s);
+        @include switchEffect;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 44px;
+            height: 24px;
+            border-radius: 22px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--gray-white);
+            border-radius: 8px;
+            transform: translate3d(4px, 4px, 0);
+            @include anim(transform, 0.2s);
+            will-change: transform;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + i {
+            @include btnRed;
+        }
+        &:checked + i::before {
+            transform: translate3d(0px, 4px, 0) scale3d(0, 0, 0);
+        }
+        &:checked + i::after {
+            transform: translate3d(24px, 4px, 0);
+        }
+    }
+}
+
+//=======================================================================
+
+// TODO: адаптив banner section
+
+.swiper__section {
+    background-color: var(--violet-lighter);
+    padding: 80px 0;
+
+    &--wrapper {
+        position: relative;
+        margin-bottom: 40px;
+
+        .swiper__blockBtn {
+            @include flexbox;
+            gap: 8px;
+            align-items: center;
+
+            @media (max-width: $md2) {
+                display: none;
+            }
+        }
+    }
+}
+.swiper-button-prev {
+    left: auto !important;
+    right: calc(48px + 8px) !important;
+}
+.swiper-button-next {
+    right: 0px !important;
+
+    &::after {
+        padding-left: 2px;
+    }
+}
+.swiper__btn {
+    min-width: 48px;
+    min-height: 48px;
+    background: var(--gray-white);
+    border-radius: 12px;
+    padding: 12px;
+    color: var(--gray-darker) !important;
+    @include anim(background, 0.1s);
+    will-change: background;
+
+    &:hover {
+        background: var(--red-lighter);
+    }
+    &:active {
+        background: var(--red-light);
+    }
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 14px !important;
+    width: 7px !important;
+    height: 12px !important;
+    color: var(--gray-black);
+    font-weight: bold;
+}
+.swiper {
+    width: 100%;
+    max-height: 280px;
+}
+.swiper-slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+//=======================================================================
+
+.faq {
+    padding: 80px 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    &__content {
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    width: 50vw;
+    max-width: 700px;
+    gap: 20px;
+}
