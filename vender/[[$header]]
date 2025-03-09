@@ -1,0 +1,53 @@
+<!-- Чанк: header -->
+<header class="header">
+    <div class="header__block __container">
+        <div class="header__content">
+            <a href="[[~[[*id]]]]" class="header__logo">
+                <img src="[[++assets_url]]icon/Logotype.png" alt="Logotype" />
+            </a>
+            <div class="burger__icon">
+                <svg width="18" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7H19M1 13H19M1 1H19" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- Бургер меню -->
+    <div class="burger__block">
+        <div class="burger__container">
+            <div class="burger__content">
+                <a href="[[~[[*id]]]]" class="header__logo">
+                    <img src="[[++assets_url]]icon/Logotype.png" alt="Logotype" />
+                </a>
+                <div class="burger__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.00028 15L8.00014 8M8.00014 8L14.9997 1.00026M8.00014 8L1 1M8.00014 8L15 14.9997"
+                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <!-- Список всех ссылок в открытом меню -->
+                <nav class="menu__body">
+                    <div class="menu__body--content">
+                        <h3>Меню</h3>
+                        <hr />
+                        <div class="menu__list">
+                            <a href="#banner">
+                                <span class="menu__list--link">Первый экран</span>
+                            </a>
+                            <a href="#slider">
+                                <span class="menu__list--link">Слайдер</span>
+                            </a>
+                            <a href="#faq">
+                                <span class="menu__list--link">Интересные ответы</span>
+                            </a>
+                            <a href="#contact">
+                                <span href="##" class="menu__list--link">Форма обратной связи</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -6,7 +6,7 @@ const handleAnchorClick = (e) => {
    const targetElement = document.getElementById(targetId);
 
    if (targetElement) {
-      const offset = 40;
+      const offset = 60;
       const targetPosition =
          targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
@@ -21,10 +21,10 @@ document.querySelectorAll(".menu__list a, .btn").forEach((anchor) => {
    anchor.addEventListener("click", handleAnchorClick);
 });
 
+// Обработки движения мыши
 document.addEventListener("DOMContentLoaded", () => {
    const rightSideBlock = document.querySelector(".banner__content--rightside");
 
-   // Функция для обработки движения мыши
    const handleMouseMove = (e) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
@@ -41,3 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
    document.addEventListener("mousemove", handleMouseMove);
 });
+
+// Полноценный нажатие на input
+document
+   .querySelector(".input-container")
+   .addEventListener("click", function () {
+      this.querySelector("input").focus();
+   });

@@ -1266,6 +1266,12 @@ h4 {
   border-radius: 12px;
   position: relative;
 }
+.form__content--desc .social__block .social-link_wrapper:hover svg path {
+  fill: var(--red-darker);
+}
+.form__content--desc .social__block .social-link_wrapper:active svg path {
+  fill: var(--red-darker);
+}
 .form__content--desc .social__block .social-link_wrapper:hover {
   background: var(--red-lighter);
 }
@@ -1320,7 +1326,7 @@ h4 {
   color: var(--gray-medium);
 }
 .form__content--InputFields .form__block .input-wrapper .input-container {
-  cursor: pointer;
+  cursor: text;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1331,11 +1337,28 @@ h4 {
   width: 100%;
   border-radius: 12px;
   background: var(--gray-lighter);
-  padding: 6.5px 12px;
+  padding: 4.5px 12px;
   gap: 8px;
+  border: 2px solid transparent;
+}
+.form__content--InputFields .form__block .input-wrapper .input-container:hover {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--gray-light);
+  border-radius: 12px;
+  background: var(--gray-lighter);
+}
+.form__content--InputFields .form__block .input-wrapper .input-container:focus-within {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--gray-light);
+  border-radius: 12px;
+  background: var(--gray-white);
+}
+.form__content--InputFields .form__block .input-wrapper .input-container:focus-within input {
+  background: var(--gray-white);
 }
 .form__content--InputFields .form__block .input-wrapper input {
-  cursor: pointer;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1388,37 +1411,17 @@ h4 {
   line-height: 150%;
   color: var(--gray-medium);
 }
-.form__content--InputFields .form__block .input-wrapper input:focus {
-  cursor: text;
-}
 .form__content--InputFields .form__block .checkbox-container {
   padding-top: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 8px;
   margin-bottom: 20px;
   cursor: pointer;
 }
 .form__content--InputFields .form__block .checkbox-container input {
   display: none;
-}
-.form__content--InputFields .form__block .checkbox-container .checkmark {
-  min-width: 24px;
-  height: 24px;
-  border-radius: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 2px solid var(--gray-medium);
-  border-radius: 8px;
-  position: relative;
-  margin-right: 10px;
-}
-.form__content--InputFields .form__block .checkbox-container .checkmark:hover svg path {
-  stroke: var(--red-light);
 }
 .form__content--InputFields .form__block .checkbox-container p {
   font-size: 16px;
@@ -1475,14 +1478,6 @@ h4 {
   }
 }
 
-.social-link_wrapper:hover svg path {
-  fill: var(--red-darker);
-}
-
-.social-link_wrapper:active svg path {
-  fill: var(--red-darker);
-}
-
 .check-icon {
   position: absolute;
   top: 50%;
@@ -1491,8 +1486,8 @@ h4 {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: none;
-  width: 12px;
-  height: 8px;
+  min-width: 12px;
+  min-height: 8px;
 }
 
 .checkbox:checked + .checkmark .check-icon {
@@ -1501,4 +1496,40 @@ h4 {
 
 .checkmark:hover .check-icon {
   display: block;
+}
+
+.checkbox-container .checkmark {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--gray-medium);
+  position: relative;
+  -webkit-transition: border-color 0.1s;
+  transition: border-color 0.1s;
+}
+
+.checkbox-container .checkmark:hover svg path {
+  stroke: var(--red-light);
+}
+
+.checkbox-container .checkbox:checked + .checkmark {
+  border-color: var(--red-main);
+}
+
+.checkbox-container .checkbox:checked + .checkmark:hover {
+  border-color: var(--red-dark);
+}
+
+.checkbox-container .checkbox:checked + .checkmark svg path {
+  stroke: var(--red-main);
+}
+
+.checkbox-container .checkmark:hover svg path {
+  stroke: var(--red-light);
+}
+
+.checkbox-container .checkbox:checked + .checkmark:hover svg path {
+  stroke: var(--red-dark);
 }
