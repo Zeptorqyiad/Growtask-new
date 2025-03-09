@@ -2,7 +2,7 @@ window.onload = () => {
    const burgerBlock = document.querySelector(".burger__block");
    const burgerIcons = document.querySelectorAll(".burger__icon");
    const mainWrapper = document.getElementById("main");
-   const navLinks = document.querySelectorAll(".menu__list li");
+   const navLinks = document.querySelectorAll(".menu__list a");
 
    const toggleMenu = () => {
       // Закрытие меню

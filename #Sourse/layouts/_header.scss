@@ -103,6 +103,10 @@
 					border-radius: 20px;
 				}
 
+				h3 {
+					user-select: none;
+				}
+
 				hr {
 					background: var(--gray-lighter);
 					height: 2px;
@@ -123,7 +127,7 @@
 				justify-content: center;
 				gap: 12px;
 
-				li {
+				a {
 					border-radius: 12px;
 					height: 40px;
 					background: var(--gray-lighter);
@@ -134,14 +138,14 @@
 					@include anim(color, 0.1s);
 					will-change: transition, color;
 
-					&:hover > a {
+					&:hover > span {
 						color: var(--red-main);
 					}
 
 					&:active {
 						background: var(--red-lighter);
 
-						> a {
+						> span {
 							color: var(--red-darker);
 						}
 					}

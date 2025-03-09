@@ -36,6 +36,7 @@
                </div>
             </div>
          </div>
+         <!-- Бургер меню -->
          <div class="burger__block">
             <div class="burger__container">
                <div class="burger__content">
@@ -48,24 +49,25 @@
                            stroke="white" stroke-width="2" stroke-linecap="round" />
                      </svg>
                   </div>
+                  <!-- Список всех ссылок в открытом меню -->
                   <nav class="menu__body">
                      <div class="menu__body--content">
                         <h3>Меню</h3>
                         <hr />
-                        <ul class="menu__list">
-                           <li>
-                              <a href="##" class="menu__list--link">Первый экран</a>
-                           </li>
-                           <li>
-                              <a href="##" class="menu__list--link">Слайдер</a>
-                           </li>
-                           <li>
-                              <a href="##" class="menu__list--link">Интересные ответы</a>
-                           </li>
-                           <li>
-                              <a href="##" class="menu__list--link">Форма обратной связи</a>
-                           </li>
-                        </ul>
+                        <div class="menu__list">
+                           <a href="#banner">
+                              <span class="menu__list--link">Первый экран</span>
+                           </a>
+                           <a href="#slider">
+                              <span class="menu__list--link">Слайдер</span>
+                           </a>
+                           <a href="#faq">
+                              <span class="menu__list--link">Интересные ответы</span>
+                           </a>
+                           <a href="#contact">
+                              <span href="##" class="menu__list--link">Форма обратной связи</span>
+                           </a>
+                        </div>
                      </div>
                   </nav>
                </div>
@@ -73,7 +75,7 @@
          </div>
       </header>
       <main class="main" id="main">
-         <section class="banner">
+         <section class="banner" id="banner">
             <div class="banner__container">
                <div class="banner__content">
                   <div class="banner__content--leftside">
@@ -82,12 +84,11 @@
                      </h1>
                      <p class="banner__subtitle">
                         Тогда тебе нужно сверстать эту тестовую страницу. А верстая её, ты ещё и узнаешь немного
-                        больше
-                        о нашей студии 😉
+                        больше о нашей студии 😉
                      </p>
                      <div class="buttons__block">
-                        <a class="btn btn-red" href="##">Скролл до формы</a>
-                        <a class="btn btn-black" href="##">
+                        <a class="btn btn-red" href="#contact">Скролл до формы</a>
+                        <a class="btn btn-black" href="#slider">
                            Скролл до следующего блока
                            <svg width="14.007812" height="8.004089" viewBox="0 0 14.0078 8.00409" fill="none"
                               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -98,27 +99,27 @@
                         </a>
                      </div>
                      <div class="switch__block">
+                        <!-- Свитч -->
                         <label class="form-switch">
                            <input id="switchInput" type="checkbox" />
                            <i></i>
                         </label>
                         <span>
                            Сможешь сделать смену цвета у эллемента «Block» на Color2/Main в блоке «Image-container»
-                           при
-                           нажатии на свитч?
+                           при нажатии на свитч?
                         </span>
                      </div>
                   </div>
+                  <!-- Правая часть главного блока сайта -->
                   <div class="banner__content--rightside">
-                     <img src="./assets/image/banner1.png" alt="bannerImg">
+                     <img src="./assets/image/banner1.png" alt="bannerImg" loading="lazy">
                      <div id="gradientBlock" class="gradient__block"></div>
-                     <img src="./assets/image/banner2.png" alt="bannerImg">
+                     <img src="./assets/image/banner2.png" alt="bannerImg" loading="lazy">
                   </div>
                </div>
             </div>
-
          </section>
-         <section class="swiper__section">
+         <section class="swiper__section" id="slider">
             <div class="__container">
                <div class="swiper__section--wrapper">
                   <h2>Сверстай этот слайдер</h2>
@@ -127,6 +128,7 @@
                      <div class="swiper-button-next swiper__btn"></div>
                   </div>
                </div>
+               <!-- Использовал Swiper.js для реализации слайдера -->
                <div class="swiper custom-swiper">
                   <div class="swiper-wrapper custom-wrapper">
                      <div class="swiper-slide slide">
@@ -167,11 +169,12 @@
                   </div>
                </div>
          </section>
-         <section class="faq">
+         <section class="faq" id="faq">
             <div class="__container">
                <h2>Интересные ответы</h2>
                <div class="faq__content">
                   <ul class="faq__content--ls">
+                     <!-- Добавляется класс ↓ open для открытия блока с ответами -->
                      <li class="grid__item">
                         <div class="grid__item--header">
                            <h4>Какими проектами я буду заниматься?</h4>
@@ -269,9 +272,10 @@
                </div>
             </div>
          </section>
-         <section class="contact-form">
+         <section class="contact-form" id="contact">
             <div class="__container">
                <div class="contact-form__content">
+                  <!-- Левая часть состоящая из описания и ссылок -->
                   <div class="form__content--desc">
                      <h2>Сможешь сделать форму?</h2>
                      <p>
@@ -301,8 +305,9 @@
                         </div>
                      </div>
                   </div>
+                  <!-- Правая часть состоящая из формы -->
                   <div class="form__content--InputFields">
-                     <form class="form__block" method="POST">
+                     <form class="form__block" method="POST" id="userForm">
                         <div class="input-wrapper">
                            <label for="nameInput">Имя и фамилия</label>
                            <div class="input-container">
@@ -314,7 +319,8 @@
                                     stroke="#CCCCCC" stroke-opacity="1.000000" stroke-width="2.000000"
                                     stroke-linejoin="round" stroke-linecap="round" />
                               </svg>
-                              <input type="text" id="nameInput" placeholder="Иван Иванов" required />
+                              <input type="text" name="name" data-validate-field="name" id="nameInput"
+                                 placeholder="Иван Иванов" required />
                            </div>
                         </div>
                         <div class="input-wrapper">
@@ -328,7 +334,8 @@
                                     stroke="#CCCCCC" stroke-opacity="1.000000" stroke-width="2.000000"
                                     stroke-linejoin="round" stroke-linecap="round" />
                               </svg>
-                              <input type="number" id="telInput" placeholder="8 800 555 35 35" required />
+                              <input type="tel" id="telInput" name="telephone" data-validate-field="telephone"
+                                 placeholder="8 800 555 35 35" required />
                            </div>
                         </div>
                         <div class="input-wrapper">
@@ -342,7 +349,8 @@
                                     stroke="#CCCCCC" stroke-opacity="1.000000" stroke-width="2.000000"
                                     stroke-linejoin="round" />
                               </svg>
-                              <input type="email" id="mailInput" placeholder="mail@example.com" required />
+                              <input type="email" name="email" data-validate-field="email" id="mailInput"
+                                 placeholder="mail@example.com" required />
                            </div>
                         </div>
                         <label for="checkboxForm" class="checkbox-container">
@@ -358,15 +366,17 @@
                            </span>
                            <p>Чек-бокс должен быть на каждом сайте с формой.</p>
                         </label>
-                        <button type="submit">
-                           <svg width="16.007812" height="11.003662" viewBox="0 0 16.0078 11.0037" fill="none"
-                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <defs />
-                              <path id="Icon" d="M1 5L6 10L15 1" stroke="#FFFFFF" stroke-opacity="1.000000"
-                                 stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" />
-                           </svg>
-                           Отправить форму
-                        </button>
+                        <a href="#popup" class="popup-link">
+                           <button type="submit">
+                              <svg width="16.007812" height="11.003662" viewBox="0 0 16.0078 11.0037" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <defs />
+                                 <path id="Icon" d="M1 5L6 10L15 1" stroke="#FFFFFF" stroke-opacity="1.000000"
+                                    stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" />
+                              </svg>
+                              Отправить форму
+                           </button>
+                        </a>
                      </form>
                   </div>
                </div>
@@ -377,10 +387,10 @@
          <div class="footer__container">
             <div class="footer__content">
                <div class="footer__content--madeIn">
-                  <img class="madeIn-rus" src="./assets/icon/Russia.png" alt="RussiaPng">
+                  <img class="madeIn-rus" src="./assets/icon/Russia.png" alt="RussiaPng" loading="lazy">
                   <div class="madeIn-textBlock">
                      <p>Сайт сделан в студии</p>
-                     <img src="./assets/icon/FooterLogo.png" alt="FooterLogo">
+                     <img src="./assets/icon/FooterLogo.png" alt="FooterLogo" loading="lazy">
                   </div>
                </div>
                <div class="footer__content--desc">
@@ -389,14 +399,31 @@
             </div>
          </div>
       </footer>
+      <!-- Попап-уведомление об успешной отправки письма -->
+      <div id="popup" class="popup">
+         <div class="popup__body">
+            <div class="popup__content">
+               <h3>Сообщение доставлено!</h3>
+               <a href="#" class="popup__close close-popup">Вернуться на главную</a>
+            </div>
+         </div>
+      </div>
    </div>
 
    <!-- Подключаем файл JS скриптов -->
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="./js/swiper.js"></script>
 
+
+   <script src="./js/script.js"></script>
    <script src="./js/switch.js"></script>
    <script src="./js/burger.js"></script>
+   <script src="./js/popup.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+   <script src="./js/just-validate.min.js"></script>
+   <script src="./js/inputmask.min.js"></script>
+   <script src="./js/inputMask.js"></script>
 </body>
 
 </html>

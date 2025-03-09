@@ -1,3 +1,4 @@
+// Switch toggle color
 const switchInput = document.getElementById("switchInput");
 const gradientBlock = document.getElementById("gradientBlock");
 
@@ -8,11 +9,16 @@ const color3 = "rgb(242, 48, 81)";
 const switchBlock = () => {
    if (switchInput.checked) {
       gradientBlock.style.background = "#897ACC";
+      console.log(123);
    } else {
       gradientBlock.style.background = `linear-gradient(90.00deg, ${color1}, ${color2} 49.479%, ${color3} 100%)`;
+      console.log(321);
    }
 };
 
+switchInput.addEventListener("change", switchBlock);
+
+// Открытие faq контекта
 const gridItems = document.querySelectorAll(".grid__item");
 const contentItems = document.querySelectorAll(".grid__item--content");
 

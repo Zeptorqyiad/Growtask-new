@@ -6,12 +6,16 @@
     border-radius: 40px;
     background: var(--gray-white);
     padding: 40px;
-    height: 280px !important;
     display: flex !important;
     flex-direction: column;
     justify-content: space-around;
     max-width: 340px;
     margin-right: 18px;
+
+    @media (max-width: $md2) {
+        padding: 20px 40px;
+        justify-content: center;
+    }
 
     .slide__title {
         background: var(--color-gradient);
@@ -27,6 +31,10 @@
         height: 2px;
         width: 100%;
         background: var(--gray-lighter);
+
+        @media (max-width: $md2) {
+            margin: 12px 0;
+        }
     }
 
     .slide__text {
@@ -34,5 +42,9 @@
         text-align: left;
         color: var(--violet-dark);
         user-select: none;
+
+        @media (max-width: $md2) {
+            @include T3;
+        }
     }
 }

@@ -67,6 +67,7 @@
         flex: 0 1 700px;
         display: flex;
         align-items: flex-start;
+        transition: transform 0.3s ease-out;
 
         .gradient__block {
             position: absolute;
@@ -172,9 +173,17 @@
     background-color: var(--violet-lighter);
     padding: 80px 0;
 
+    @media (max-width: $md1) {
+        padding: 40px 0;
+    }
+
     &--wrapper {
         position: relative;
         margin-bottom: 40px;
+
+        @media (max-width: $md2) {
+            margin-bottom: 32px;
+        }
 
         h2 {
             color: var(--gray-darker);
@@ -232,11 +241,20 @@
     max-height: 280px;
 }
 .swiper-slide {
-    width: 100%;
     flex-shrink: 0;
-}
+    width: 340px !important;
+    height: 280px !important;
 
-// TODO: Адаптив
+    @media (max-width: 1366.98px) {
+        width: 304px !important;
+        height: 260px !important;
+    }
+
+    @media (max-width: $md2) {
+        width: 280px !important;
+        height: 220px !important;
+    }
+}
 
 //=======================================================================
 
