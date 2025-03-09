@@ -11,7 +11,7 @@ h1 {
     line-height: 110%;
     font-weight: $bold;
     font-family: $ff2;
-    @media (max-width: $md2) {
+    @media (max-width: $md1) {
         font-size: 42px;
     }
 }
@@ -20,7 +20,7 @@ h2 {
     line-height: $basicLh;
     font-weight: $bold;
     font-family: $ff2;
-    @media (max-width: $md2) {
+    @media (max-width: $md1) {
         font-size: 32px;
     }
 }
@@ -29,7 +29,7 @@ h3 {
     line-height: $basicLh;
     font-weight: $bold;
     font-family: $ff2;
-    @media (max-width: $md2) {
+    @media (max-width: $md1) {
         font-size: 24px;
     }
 }
@@ -38,10 +38,9 @@ h4 {
     line-height: $basicLh;
     font-weight: $bold;
     font-family: $ff2;
-    @media (max-width: $md2) {
+    @media (max-width: $md1) {
         font-size: 20px;
     }
 }
 
 //=======================================================================
-

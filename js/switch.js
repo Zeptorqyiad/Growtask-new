@@ -13,13 +13,19 @@ const switchBlock = () => {
    }
 };
 
-// const gridItem = document.querySelectorAll(".grid__item");
-// const contentItem = document.querySelectorAll(".grid__item--content");
+const gridItems = document.querySelectorAll(".grid__item");
+const contentItems = document.querySelectorAll(".grid__item--content");
 
-// gridItem.forEach((li) => {
-//    li.addEventListener("click", () => {
-//       contentItem.forEach((item) => {
-//          item.style.display = "block"; // Решить проблему
-//       });
-//    });
-// });
+gridItems.forEach((item, index) => {
+   item.addEventListener("click", () => {
+      // Переключаем класс open для текущего элемента
+      item.classList.toggle("open");
+
+      // Переключаем отображение соответствующего контента
+      if (item.classList.contains("open")) {
+         contentItems[index].style.display = "block";
+      } else {
+         contentItems[index].style.display = "none";
+      }
+   });
+});

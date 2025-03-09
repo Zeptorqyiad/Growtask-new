@@ -23,6 +23,15 @@
         gap: 20px;
         align-items: center;
         padding: 20px;
+
+        h4 {
+            color: var(--gray-darker);
+        }
+
+        svg {
+            transition: transform 0.4s;
+            will-change: transform;
+        }
     }
 
     &--content {
@@ -32,4 +41,10 @@
         padding: 0 20px 20px 20px;
         transition: all;
     }
+}
+.grid__item.open .grid__item--content {
+    display: block;
+}
+.grid__item.open .grid__item--header svg {
+    transform: scaleY(-1);
 }

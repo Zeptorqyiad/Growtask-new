@@ -10,7 +10,6 @@
 
 .banner__content {
     &--leftside {
-        // width: 700px;
         flex: 0 1 700px;
         padding-right: 20px;
 
@@ -165,9 +164,9 @@
     }
 }
 
-//=======================================================================
-
 // TODO: адаптив banner section
+
+//=======================================================================
 
 .swiper__section {
     background-color: var(--violet-lighter);
@@ -176,6 +175,10 @@
     &--wrapper {
         position: relative;
         margin-bottom: 40px;
+
+        h2 {
+            color: var(--gray-darker);
+        }
 
         .swiper__blockBtn {
             @include flexbox;
@@ -233,23 +236,79 @@
     flex-shrink: 0;
 }
 
+// TODO: Адаптив
+
 //=======================================================================
 
 .faq {
     padding: 80px 0;
 
+    @media (max-width: $md2) {
+        padding: 40px 0;
+    }
+
     h2 {
-        margin-bottom: 40px;
+        color: var(--gray-darker);
     }
+    .faq__content {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
 
+        @media (max-width: $md2) {
+            margin-top: 32px;
+            gap: 12px;
+        }
+
+        &--ls {
+            flex: 0 1 50%;
+            > li:not(:last-child) {
+                margin-bottom: 20px;
+
+                @media (max-width: $md1) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        &--rs {
+            flex: 0 1 50%;
+            > li:not(:last-child) {
+                margin-bottom: 20px;
+
+                @media (max-width: $md1) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        @media (max-width: $md2) {
+            flex-direction: column;
+        }
+    }
+}
+
+//=======================================================================
+
+.contact-form {
+    padding: 80px 0;
+    background-color: var(--violet-lighter);
+
+    @media (max-width: $md2) {
+        padding: 40px 0;
+    }
     &__content {
+        @include flexbox;
+        align-items: flex-start;
+        gap: 20px;
+
+        @media (max-width: $md2) {
+            flex-direction: column;
+            align-items: inherit;
+        }
     }
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-    width: 50vw;
-    max-width: 700px;
-    gap: 20px;
-}
+// TODO: Сделать галочку
+// TODO: Сделать маску на поля
+// TODO: Сделать label изменяющимся на Error
+// TODO: настроить отправку

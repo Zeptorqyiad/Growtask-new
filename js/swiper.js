@@ -1,5 +1,6 @@
 new Swiper(".custom-swiper", {
    loop: true,
+   direction: "horizontal",
 
    navigation: {
       nextEl: ".swiper-button-next",

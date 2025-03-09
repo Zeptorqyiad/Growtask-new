@@ -10,9 +10,11 @@
 @import "./layouts/header";
 @import "./layouts/wrapper";
 @import "./layouts/main";
+@import "./layouts/footer";
 
 // ПОВТОРНО ИСПОЛЬЗУЕМЫЕ КОМПОНЕНТЫ>
 @import "./components/popup";
 @import "./components/typography";
 @import "./components/slideItem";
 @import "./components/accordion";
+@import "./components/form";
