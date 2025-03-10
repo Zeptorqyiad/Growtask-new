@@ -16,9 +16,13 @@ $(document).ready(function () {
    });
 });
 
-// Полноценный нажатие на input
-document
-   .querySelector(".input-container")
-   .addEventListener("click", function () {
-      this.querySelector("input").focus();
+const inputContainers = document.querySelectorAll(".input-container");
+
+inputContainers.forEach((container) => {
+   container.addEventListener("click", function () {
+      const input = this.querySelector("input");
+      if (input) {
+         input.focus();
+      }
    });
+});
