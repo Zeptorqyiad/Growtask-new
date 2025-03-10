@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
    let isAnimating = false;
 
    const handleMouseMove = (e) => {
+      if (window.innerWidth <= 768) return;
+
       if (isAnimating) return;
       isAnimating = true;
 
@@ -46,4 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
    };
 
    document.addEventListener("mousemove", handleMouseMove);
+});
+
+window.addEventListener("resize", () => {
+   if (window.innerWidth <= 768) {
+      rightSideBlock.style.transform = "translate(0, 0)";
+   }
 });
