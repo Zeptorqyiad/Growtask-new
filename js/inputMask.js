@@ -4,3 +4,10 @@ im.mask(inputs);
 
 const emailInput = document.getElementById("mailInput");
 const emailMask = IMask(emailInput, { mask: /^\S*@?\S*$/ });
+
+// Полноценный нажатие на input
+document
+   .querySelector(".input-container")
+   .addEventListener("click", function () {
+      this.querySelector("input").focus();
+   });

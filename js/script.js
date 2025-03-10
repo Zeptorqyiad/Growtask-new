@@ -24,27 +24,26 @@ document.querySelectorAll(".menu__list a, .btn").forEach((anchor) => {
 // Обработки движения мыши
 document.addEventListener("DOMContentLoaded", () => {
    const rightSideBlock = document.querySelector(".banner__content--rightside");
+   let isAnimating = false;
 
    const handleMouseMove = (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
+      if (isAnimating) return;
+      isAnimating = true;
 
-      // Получаем размеры окна браузера
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
+      requestAnimationFrame(() => {
+         const mouseX = e.clientX;
+         const mouseY = e.clientY;
 
-      const offsetX = -(mouseX - windowWidth / 2) * 0.05;
-      const offsetY = -(mouseY - windowHeight / 2) * 0.05;
+         const windowWidth = window.innerWidth;
+         const windowHeight = window.innerHeight;
 
-      rightSideBlock.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+         const offsetX = Math.round(-(mouseX - windowWidth / 2) * 0.05);
+         const offsetY = Math.round(-(mouseY - windowHeight / 2) * 0.05);
+
+         rightSideBlock.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+         isAnimating = false;
+      });
    };
 
    document.addEventListener("mousemove", handleMouseMove);
 });
-
-// Полноценный нажатие на input
-document
-   .querySelector(".input-container")
-   .addEventListener("click", function () {
-      this.querySelector("input").focus();
-   });

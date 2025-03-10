@@ -562,6 +562,11 @@ input[type=number] {
           flex: 0 0 50%;
   height: 540px;
   max-width: 700px;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 @media (max-width: 1620px) {
   .banner__content--rightside {
