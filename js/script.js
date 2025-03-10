@@ -49,9 +49,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
    document.addEventListener("mousemove", handleMouseMove);
 });
-
-window.addEventListener("resize", () => {
-   if (window.innerWidth <= 768) {
-      rightSideBlock.style.transform = "translate(0, 0)";
-   }
-});
